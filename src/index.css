@@ -87,3 +87,72 @@
   @apply opacity-50 
 }
 
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.icon {
+  transition: .5s ease;
+}
+
+.icon:hover {
+  animation: anim-scale .5s linear;
+
+}
+.article > *{
+  @apply leading-loose
+}
+.article >  p:first-child::first-letter {
+  @apply text-6xl text-red-500
+} 
+.article ol{
+  @apply list-decimal 
+}
+.article p{
+  @apply mb-2
+}
+.article ul{
+  @apply list-disc
+}
+.article blockquote{
+  @apply pl-5 border-l border-red-500
+}
+
+.article a{
+  @apply hover:text-accent
+}
+
+
+@keyframes anim-scale {
+
+0%{
+  transform: scale(1)
+}
+
+50% {
+  transform: scale(.8)
+}
+
+100%{
+  transform: scale(1)
+}
+}

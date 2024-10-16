@@ -3,16 +3,19 @@ import HomeBanner from "./homeBanner";
 import HomeTrending from "./HomeTrending";
 import HomeSticky from "./HomeSticky";
 import HomeVideo from "./HomeVideo";
+import Footer from "@/components/partials/Footer";
 
 const Home = () => {
       
   return (
     <>
-  <Header/>
+  
+  {/* <Header/> */}
   <HomeBanner/>
   <HomeTrending/>
   <HomeSticky/>
- 
+  <Footer/>
+
  </>
   );
 

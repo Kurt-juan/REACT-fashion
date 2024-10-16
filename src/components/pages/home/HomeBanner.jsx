@@ -6,6 +6,7 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 
 
@@ -43,8 +44,33 @@ const HomeBanner = () => {
         slidesToShow: 3,
         slidesToScroll: 3,
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
-    
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
 
 
@@ -64,13 +90,13 @@ const HomeBanner = () => {
             
                 <div className="banner-card relative outline-none px-1" key ={key} >
                     <div className='bg-black'>
-                <img src={`${imgUrlPath}${item.fashion_image}`}className="width-full h-[746px] object-cover object-center"/>
+                <img src={`${imgUrlPath}${item.fashion_image}`}className="width-full h-[300px] md:h-[746px]  object-cover object-center"/>
                 </div>
                 
                 <div className="absolute bottom-1 text-center left-1/1-translate-x-1/2 w-[330px] text-light z-50">
                   <small className="text-xs uppercase">{item.fashion_category}</small>
                   <p className="text-xs mt-3 mb-1 uppercase">{item.fashion_publish}</p>
-                  <h4>{item.fashion_title}</h4>
+                  <Link to = {`${item.fashion_title.toLowerCase().replaceAll(" ","-")}`}><h4>{item.fashion_title}</h4></Link>
                 </div>
              </div>
 

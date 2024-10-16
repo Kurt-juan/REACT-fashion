@@ -6,15 +6,15 @@ import PartHeader from './part/PartHeader'
 
 const HomeTrending = () => {
     const trendingPost = fashionBlog.filter((item) => item.fashion_is_trending === 1);
-    console.log(trendingPost)
+   
   return (
     <section className='py-24'>
         <Wrapper>
            <PartHeader title = "Trending Posts"/>
-            <div className="grid grid-cols-4 gap-5">
+            <div className="grid md:grid-cols-4 gap-5">
                
                {trendingPost.slice(0,4).map((item, key)=> {
-                console.log(item)
+          
                return(
 
 
