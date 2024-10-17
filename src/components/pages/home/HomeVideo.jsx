@@ -13,7 +13,7 @@ const HomeVideo = () => {
     <iframe className='md:w-full aspect-video md:h-[500px]' src={code} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
    
-    <div className='flex gap-6 max-w-[390px] md:max-w-[900px] overflow-auto mt-10 pb-5 '>
+    <div className='flex gap-6 max-w-[350px] md:max-w-[900px] overflow-auto mt-10 pb-5 '>
         {videos.map((item, key)=>{
             return (         
                 <button className='shrink-0 w-[170px]' key={key} onClick={()=> handleClick(item.video_code)}>

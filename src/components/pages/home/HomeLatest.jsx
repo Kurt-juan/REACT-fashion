@@ -27,7 +27,7 @@ console.log(latestPost)
   return( 
 
       <div className="md:flex gap-5 pb-8 mb-5 border-b border-gray-200 items-center" key= {key}>
-      <img src={`${imgUrlPath}/${item.fashion_image}`} alt="" className='w-[390px]  h-[247px] object-cover'/>
+      <img src={`${imgUrlPath}/${item.fashion_image}`} alt="" className='w-full md:w-[390px]  h-[247px] object-cover'/>
         <div className='text-center mx-auto'>
         <small className="text-xs uppercase text-accent">{item.fashion_category}</small>
         <h6 className='mb-0 mt-6 text-[1.5rem]'>{item.fashion_title} </h6>

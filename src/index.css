@@ -141,6 +141,9 @@
   @apply hover:text-accent
 }
 
+.no-scroll{
+  @apply h-screen overflow-hidden
+}
 
 @keyframes anim-scale {
 

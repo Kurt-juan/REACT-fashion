@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
   
-  {/* <Header/> */}
+  <Header/>
   <HomeBanner/>
   <HomeTrending/>
   <HomeSticky/>
@@ -19,6 +19,6 @@ const Home = () => {
  </>
   );
 
-}
+} 
 
 export default Home
